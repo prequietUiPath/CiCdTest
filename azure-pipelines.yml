@@ -33,5 +33,3 @@ steps:
     orchestratorConnection: 'UiPAth OrchestratorConnection'
     packagesPath: '$(Build.ArtifactStagingDirectory)\Output'
     folderName: 'test1'
-    processNames: 'TESTCicdprocess'
-    processName: 'TESTCicdprocess'
