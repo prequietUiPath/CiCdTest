@@ -34,3 +34,8 @@ steps:
     packagesPath: '$(Build.ArtifactStagingDirectory)\Output'
     folderName: 'test1'
     processName: 'CICDTestProcess'
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)\Output'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
