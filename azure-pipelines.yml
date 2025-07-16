@@ -20,17 +20,8 @@ steps:
 - task: UiPathInstallPlatform@5
   inputs:
     cliVersion: 'WIN_24.10.9050.17872'
-- task: UiPathPack@5
+- task: UiPathRunJob@5
   inputs:
-    versionType: 'AutoVersion'
-    projectJsonPath: '$(Build.SourcesDirectory)'
-    outputType: 'Process'
     orchestratorConnection: 'UiPAth OrchestratorConnection'
-    outputPath: '$(Build.ArtifactStagingDirectory)\Output'
-    traceLevel: 'Verbose'
-    
-- task: PublishBuildArtifacts@1
-  inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)\Output'
-    ArtifactName: 'drop'
-    publishLocation: 'Container'
+    processName: 'TestCICDUiPathProject_Main.xaml'
+    folderName: 'test1'
